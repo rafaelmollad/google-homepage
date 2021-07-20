@@ -1,0 +1,92 @@
+/***************
+ * BASE STYLES * 
+ ***************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --gray: #f8f9fa;
+  --gray2: #dadce0;
+  --gray3: #70757a;
+  --gray4: rgba(60, 64, 67, 0.08);
+  --black: #3c4043;
+  --black2: #202124;
+  --black3: rgba(0, 0, 0, 0.87);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/***************
+ * BASE STYLES * 
+ ***************/
+
+.header {
+  padding: 1.2rem;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.nav__link {
+  font-size: 1.3rem;
+  color: var(--black3);
+  margin-left: 1.5rem;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__apps-container,
+.nav__account-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.nav__apps-container {
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.nav__apps-container:hover,
+.nav__account-container:hover {
+  background: var(--gray4);
+  cursor: pointer;
+}
+
+.nav__account {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
