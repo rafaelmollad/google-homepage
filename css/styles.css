@@ -10,11 +10,13 @@
 
 :root {
   --white: #fff;
+
   --gray: #f8f9fa;
-  --gray2: #dfe1e5;
-  --gray3: #dadce0;
-  --gray4: #70757a;
-  --gray5: rgba(60, 64, 67, 0.08);
+  --gray2: #f2f2f2;
+  --gray3: #dfe1e5;
+  --gray4: #dadce0;
+  --gray5: #70757a;
+  --gray6: rgba(60, 64, 67, 0.08);
   --black: #3c4043;
   --black2: #202124;
   --black3: rgba(0, 0, 0, 0.87);
@@ -30,6 +32,8 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
@@ -87,7 +91,7 @@ ul {
 
 .nav__apps-container:hover,
 .nav__account-container:hover {
-  background: var(--gray5);
+  background: var(--gray6);
   cursor: pointer;
 }
 
@@ -106,9 +110,15 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  width: 100%;
   max-width: 61rem;
-  margin: 9.5rem auto 0 auto;
   padding: 0 1.2rem;
+  margin: 9.5rem auto 9.5rem auto;
+}
+
+.logo {
+  width: 50%;
 }
 
 .main__search {
@@ -116,7 +126,7 @@ ul {
   align-items: center;
   width: 100%;
   height: 4.4rem;
-  border: 1px solid var(--gray2);
+  border: 1px solid var(--gray3);
   border-radius: 2.4rem;
   margin: 3rem 0;
 }
@@ -152,7 +162,7 @@ ul {
   background: var(--gray);
   border: 1px solid var(--gray);
   border-radius: 4px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--black);
   cursor: pointer;
   margin: 0 4px;
@@ -160,6 +170,36 @@ ul {
 
 .buttons__btn:hover {
   box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
-  border: 1px solid var(--gray2);
+  border: 1px solid var(--gray6);
   color: var(--black2);
+}
+
+/**********
+ * FOOTER * 
+ **********/
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: auto;
+  background: var(--gray2);
+  border-top: 1px solid var(--gray4);
+}
+
+.footer__left,
+.footer__right {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__link {
+  display: inline-block;
+  padding: 1.5rem;
+  color: var(--gray5);
+  font-size: 1.2rem;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
 }
